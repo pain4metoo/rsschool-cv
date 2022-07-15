@@ -1,31 +1,96 @@
 @import "./variables.scss";
-@import "./normalize.scss";
-@import "./fonts.scss";
-@import "./header.scss";
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
+.main {
+  background-color: $color-bg;
+  &_about_img {
+    max-width: 60rem;
+    width: 100%;
+    display: block;
+    padding: 3rem;
+    padding-bottom: 2rem;
+  }
+  &_about_title {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 0;
+    padding-left: 3rem;
+    min-width: 28rem;
+    font-weight: 300;
+  }
+  &_about_text {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    margin: 0;
+    padding: 1rem;
+    margin-top: 3rem;
+    padding-left: 3rem;
+    font-weight: 300;
+    min-width: 28rem;
+  }
+  &_title_projects {
+    margin: 0;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  &_projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    width: 32rem;
+    padding: 1rem;
+  }
+  &_project {
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    min-width: 25rem;
+    min-height: 34rem;
+    max-width: 32rem;
+    width: 100%;
+    border-left: 5px solid rgba(255, 255, 255, 0.11);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  &_project_title {
+    padding-left: 3rem;
+    margin: 2rem 0rem;
+  }
+  &_project_text {
+    font-size: 1.6rem;
+    padding-left: 3rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  &_project_btn {
+    z-index: 1;
+    margin-left: 3rem;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background-color: transparent;
+    color: $color-main;
+    border: 0.1rem solid #e1a87a;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+    &:hover {
+      border-color: transparent;
+    }
+  }
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 10px;
-  height: 100%;
+.main_project_btn:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: #e1a87a;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-body {
-  font-family: $font-main;
-  font-size: 2.1rem;
-  line-height: 2.5rem;
-  font-weight: 300;
-  color: $color-main;
-}
-
-.container {
-  max-width: 140rem;
-  padding: 0;
-  margin: 0 auto;
-
+.main_project_btn:hover:before {
+  transform: translateX(0);
+  color: white;
 }

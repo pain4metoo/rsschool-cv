@@ -1,172 +1,359 @@
 @import "./variables.scss";
 
-.main {
-  background-color: $color-bg;
-  &_about_img {
-    max-width: 60rem;
-    width: 100%;
-    display: block;
-    padding: 3rem;
-    padding-bottom: 2rem;
-  }
-  &_about_title {
-    font-size: 2rem;
-    line-height: 3rem;
-    margin: 0;
-    padding-left: 3rem;
-    min-width: 28rem;
-    font-weight: 300;
-  }
-  &_about_text {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
-    margin: 0;
-    padding: 1rem;
-    margin-top: 3rem;
-    padding-left: 3rem;
-    font-weight: 300;
-    min-width: 28rem;
-  }
-  &_title_projects {
-    margin: 0;
-    text-align: center;
-    padding: 4rem 0;
-  }
-  &_projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    width: 32rem;
-    padding: 1rem;
-  }
-  &_project {
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    min-width: 25rem;
-    min-height: 34rem;
-    max-width: 32rem;
-    width: 100%;
-    border-left: 5px solid rgba(255, 255, 255, 0.11);
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  &_project_title {
-    padding-left: 3rem;
-    margin: 2rem 0rem;
-  }
-  &_project_text {
-    font-size: 1.6rem;
-    padding-left: 3rem;
-    margin: 0;
-    margin-bottom: 2rem;
-  }
-  &_project_btn {
-    z-index: 1;
-    margin-left: 3rem;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    background-color: transparent;
-    color: $color-main;
-    border: 0.1rem solid #e1a87a;
-    padding: 1rem 4rem;
-    cursor: pointer;
-    transition: ease-in 0.5s;
-    &:hover {
-      border-color: transparent;
+@media (min-width: 320px) {
+  .main {
+    background-color: $color-bg;
+    &_about_img {
+      max-width: 60rem;
+      width: 100%;
+      display: block;
+      padding: 3rem;
+      padding-bottom: 2rem;
     }
-  }
-  &_skills_title {
-    margin: 0;
-    text-align: center;
-    padding: 4rem 0;
-  }
-  &_skills_items {
-    padding-left: 2rem;
-    list-style: none;
-    margin-bottom: 2rem;
-  }
-  &_skills_item {
-    margin-bottom: 1rem;
-  }
-  &_skills_text {
-    margin-left: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    min-width: 25rem;
-    max-width: 30rem;
-    width: 100%;
-    border-left: 5px solid rgba(255, 255, 255, 0.11);
-    padding: 1rem;
-  }
-  &_skills_about {
-    font-size: 1.6rem;
-    padding-left: 1rem;
-    margin: 0;
-  }
-  &_education_title {
-    margin: 0;
-    text-align: center;
-    padding: 4rem 0;
-  }
-  &_education_inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &_education_text {
-    font-weight: 300;
-    font-size: 1.9rem;
-    margin-bottom: 1rem;
-    position: relative;
-    &:nth-of-type(2) {
+    &_about_title {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin: 0;
+      padding-left: 3rem;
+      min-width: 28rem;
+      font-weight: 300;
+    }
+    &_about_text {
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+      margin: 0;
+      padding: 1rem;
+      margin-top: 3rem;
+      padding-left: 3rem;
+      font-weight: 300;
+      min-width: 28rem;
+    }
+    &_title_projects {
+      margin: 0;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    &_projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      width: 32rem;
+      padding: 1rem;
+    }
+    &_project {
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      min-width: 25rem;
+      min-height: 34rem;
+      max-width: 32rem;
+      width: 100%;
+      border-left: 5px solid rgba(255, 255, 255, 0.11);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    &_project_title {
+      padding-left: 3rem;
+      margin: 2rem 0rem;
+    }
+    &_project_text {
+      font-size: 1.6rem;
+      padding-left: 3rem;
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+    &_project_btn {
+      z-index: 1;
       margin-left: 3rem;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      background-color: transparent;
+      color: $color-main;
+      border: 0.1rem solid #e1a87a;
+      padding: 1rem 4rem;
+      cursor: pointer;
+      transition: ease-in 0.5s;
+      &:hover {
+        border-color: transparent;
+      }
     }
-    &:nth-of-type(2)::after {
-      content: "";
+    &_skills_title {
+      margin: 0;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    &_skills_items {
+      padding-left: 2rem;
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    &_skills_item {
+      margin-bottom: 1rem;
+    }
+    &_skills_text {
+      margin-left: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      min-width: 25rem;
+      max-width: 30rem;
+      width: 100%;
+      border-left: 5px solid rgba(255, 255, 255, 0.11);
+      padding: 1rem;
+    }
+    &_skills_about {
+      font-size: 1.6rem;
+      padding-left: 1rem;
+      margin: 0;
+    }
+    &_skills_grafic {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      border: 2rem solid transparent;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 2rem;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+    &_skills_circle {
       position: absolute;
-      left: -0.5rem;
-      top: -1rem;
-      width: 0.1rem;
-      height: 5rem;
-      background: yellow;
+      left: -2rem;
+      bottom: -2rem;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      transition: all 0.05s;
+    }
+    &_skills_circle_html {
+      border-bottom: 2rem solid transparent;
+      border-right: 2rem solid transparent;
+      border-left: 2rem solid transparent;
+      border-top: 2rem solid #08fdd8;
+      animation: html 3s linear;
+    }
+    &_skills_circle_js {
+      border-bottom: 2rem solid transparent;
+      border-right: 2rem solid #ff2253;
+      border-left: 2rem solid transparent;
+      border-top: 2rem solid transparent;
+      animation: js 3s linear;
+    }
+    &_skills_circle_ts {
+      border-bottom: 2rem solid #d26cd5;
+      border-right: 2rem solid transparent;
+      border-left: 2rem solid transparent;
+      border-top: 2rem solid transparent;
+      animation: react 3s linear;
+    }
+    &_skills_circle_react {
+      border-bottom: 2rem solid transparent;
+      border-right: 2rem solid transparent;
+      border-left: 2rem solid #ffeecd;
+      border-top: 2rem solid transparent;
+      animation: git 3s linear;
+    }
+    &_skills_inner {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+    }
+    &_description_inner {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+    &_description_title {
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin: 0;
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    &_description_item {
+      display: inline-block;
+      background: transparent;
+      width: 100%;
+      height: 0.3rem;
+    }
+    &_description_html {
+      background-color: #08fdd8;
+    }
+    &_description_js {
+      background-color: #ff2253;
+    }
+    &_description_react {
+      background-color: #d26cd5;
+    }
+    &_description_git {
+      background-color: #ffeecd;
+    }
+    &_description_anim_html {
+      transition: ease-in-out;
+      animation: line 4s;
+    }
+    &_description_anim_js {
+      transition: ease-in-out;
+      animation: line 3s;
+    }
+    &_description_anim_react {
+      transition: ease-in-out;
+      animation: line 2s;
+    }
+    &_description_anim_git {
+      transition: ease-in-out;
+      animation: line 1s;
+    }
+    &_education_title {
+      margin: 0;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    &_education_inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_education_text {
+      font-weight: 300;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      position: relative;
+      &:nth-of-type(2) {
+        margin-left: 3rem;
+      }
+      &:nth-of-type(2)::after {
+        content: "";
+        position: absolute;
+        left: -0.5rem;
+        top: -1rem;
+        width: 0.1rem;
+        height: 5rem;
+        background: yellow;
+      }
+    }
+    &_contacts_title {
+      margin: 0;
+      text-align: center;
+      padding: 4rem 0;
+      padding-bottom: 2rem;
+    }
+    &_contacts_items {
+      padding-left: 2rem;
+      list-style: none;
+    }
+    &_contacts_item {
+      margin-bottom: 1rem;
+    }
+    &_contacts_link {
+      text-decoration: none;
+      color: $color-main;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
-  &_contacts_title {
-    margin: 0;
-    text-align: center;
-    padding: 4rem 0;
-    padding-bottom: 2rem;
+
+  .main_project_btn:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: #e1a87a;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  &_contacts_items {
-    padding-left: 2rem;
-    list-style: none;
-  }
-  &_contacts_item {
-    margin-bottom: 1rem;
-  }
-  &_contacts_link {
-    text-decoration: none;
-    color: $color-main;
-    transition: all 0.5s;
-    &:hover {
-      opacity: 0.5;
-    }
+
+  .main_project_btn:hover:before {
+    transform: translateX(0);
+    color: white;
   }
 }
 
-.main_project_btn:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  transform: translateX(-100%);
-  background: #e1a87a;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+.main_skills_grafic:hover .main_skills_circle_html {
+  box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.5);
 }
 
-.main_project_btn:hover:before {
-  transform: translateX(0);
-  color: white;
+.main_skills_grafic:hover .main_skills_circle_js {
+  box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.5);
+}
+
+.main_skills_grafic:hover .main_skills_circle_ts {
+  box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.5);
+}
+
+.main_skills_grafic:hover .main_skills_circle_react {
+  box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.5);
+}
+
+@keyframes line {
+  0% {
+    width: 20%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes html {
+  0% {
+    box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.3);
+    border-top: 1rem solid transparent;
+  }
+  50% {
+    border-top: 1.5rem solid #08fdd8;
+    box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.5);
+  }
+  100% {
+    border-top: 2rem solid #08fdd8;
+    box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.1);
+  }
+}
+
+@keyframes js {
+  0% {
+    box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.3);
+    border-right: 1rem solid transparent;
+  }
+  50% {
+    border-right: 1.5rem solid #ff2253;
+    box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.5);
+  }
+  100% {
+    border-right: 2rem solid #ff2253;
+    box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.1);
+  }
+}
+
+@keyframes react {
+  0% {
+    box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.3);
+    border-bottom: 1rem solid transparent;
+  }
+  50% {
+    border-bottom: 1.5rem solid #d26cd5;
+    box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.5);
+  }
+  100% {
+    border-bottom: 2rem solid #d26cd5;
+    box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.1);
+  }
+}
+
+@keyframes git {
+  0% {
+    box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.3);
+    border-left: 1rem solid transparent;
+  }
+  50% {
+    border-left: 1.5rem solid #ffeecd;
+    box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.5);
+  }
+  100% {
+    border-left: 2rem solid #ffeecd;
+    box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.1);
+  }
 }

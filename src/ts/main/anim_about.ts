@@ -5,3 +5,5 @@ const aboutText: HTMLInputElement | any = showText(
 );
 
 setTimeout(() => aboutText.forEach((i) => (i.style.opacity = 1)), 0);
+
+

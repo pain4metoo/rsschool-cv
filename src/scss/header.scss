@@ -110,7 +110,6 @@
     &_hide {
       opacity: 0;
       z-index: -1;
-      transition: ease-out all 0.3s;
       pointer-events: none;
     }
     &_menu {

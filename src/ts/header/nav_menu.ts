@@ -10,11 +10,13 @@ const video: HTMLInputElement | null = document.querySelector(
 );
 const social: HTMLInputElement | null =
   document.querySelector(".header_social");
+const menuInner: HTMLInputElement | null =
+  document.querySelector(".header_menu_inner");
 
 const isVisible = () => {
   menu?.classList.toggle("header_menu_hiden");
-  social?.classList.toggle("header_menu_hiden")
-  social?.classList.toggle("header_social_anim")
+  social?.classList.toggle("header_menu_hiden");
+  social?.classList.toggle("header_social_anim");
   header?.classList.toggle("header_style");
   mainBlock?.classList.toggle("header_hide");
   video?.classList.toggle("header_hide");
@@ -24,5 +26,17 @@ const isVisible = () => {
 };
 
 menuBtn?.addEventListener("click", isVisible);
+menuInner?.addEventListener("click", (e) => {
+  let target = e.target;
+  const menuItems: NodeListOf<Element> | null =
+    document.querySelectorAll(".header_menu_link");
+
+  for (let i = 0; i < menuItems.length; i++) {
+    if (target === menuItems[i]) {
+      isVisible();
+      break;
+    }
+  }
+});
 
 export {};

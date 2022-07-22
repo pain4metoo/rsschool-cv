@@ -1,0 +1,39 @@
+.footer {
+  padding: 1rem;
+  background-color: $color-bg;
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_link_rs {
+    text-decoration: none;
+  }
+  &_img_rs {
+    width: 5rem;
+    height: 5rem;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &_year {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  &_link_git {
+    text-decoration: none;
+    color: $color-main;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  &_img_git {
+    width: 5rem;
+    height: 5rem;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

@@ -2,9 +2,9 @@
 
 @media (min-width: 320px) {
   .main {
+    padding: 1rem;
     background-color: $color-bg;
     &_about_img {
-      max-width: 60rem;
       width: 100%;
       display: block;
       padding: 3rem;
@@ -29,6 +29,9 @@
       min-width: 28rem;
     }
     &_title_projects {
+      font-size: 3rem;
+      line-height: 3.1rem;
+      font-weight: bold;
       margin: 0;
       text-align: center;
       padding: 4rem 0;
@@ -51,6 +54,9 @@
       margin-bottom: 1rem;
     }
     &_project_title {
+      font-size: 3rem;
+      line-height: 3.1rem;
+      font-weight: bold;
       padding-left: 3rem;
       margin: 2rem 0rem;
     }
@@ -76,7 +82,15 @@
         border-color: transparent;
       }
     }
+    &_skills_description {
+      padding: 0;
+      margin-left: 1rem;
+      list-style: none;
+    }
     &_skills_title {
+      font-size: 3rem;
+      line-height: 3.1rem;
+      font-weight: bold;
       margin: 0;
       text-align: center;
       padding: 4rem 0;
@@ -90,10 +104,10 @@
       margin-bottom: 1rem;
     }
     &_skills_text {
-      margin-left: 1rem;
       border: 1px solid rgba(255, 255, 255, 0.11);
       min-width: 25rem;
-      max-width: 30rem;
+      max-width: 40rem;
+      margin: 0 auto;
       width: 100%;
       border-left: 5px solid rgba(255, 255, 255, 0.11);
       padding: 1rem;
@@ -111,6 +125,7 @@
       margin: 0 auto;
       position: relative;
       margin-bottom: 2rem;
+      transition: linear 3s;
       &:hover {
         transform: rotate(360deg);
       }
@@ -167,7 +182,7 @@
       font-weight: 300;
       margin: 0;
       margin-top: 1rem;
-      margin-bottom: 0.2rem;
+      margin-bottom: -0.8rem;
     }
     &_description_item {
       display: inline-block;
@@ -202,6 +217,17 @@
     &_description_anim_git.active {
       transition: ease-in-out;
       animation: line 1s;
+    }
+    &_code {
+      margin: 1rem;
+    }
+    &_code_title {
+      font-size: 3rem;
+      line-height: 3.1rem;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+      padding: 3rem 0;
     }
     &_education_title {
       margin: 0;
@@ -238,8 +264,14 @@
       padding-bottom: 2rem;
     }
     &_contacts_items {
+      margin: 1rem;
+      margin-bottom: 0;
       padding-left: 2rem;
+      padding-bottom: 1rem;
       list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
     }
     &_contacts_item {
       margin-bottom: 1rem;
@@ -248,9 +280,28 @@
       text-decoration: none;
       color: $color-main;
       transition: all 0.5s;
+      border-width: 2rem;
+      border-color: red;
       &:hover {
         opacity: 0.5;
       }
+    }
+    &_contacts_img {
+      width: 5rem;
+      height: 5rem;
+      transition: linear;
+    }
+    &_contacts_img_link {
+      border: 1rem solid rgba(65, 105, 225, 0.5);
+      animation: borderLink 5s infinite alternate-reverse;
+    }
+    &_contacts_img_git {
+      border: 1rem solid rgba(55, 55, 55, 0.5);
+      animation: borderGit 5s infinite alternate-reverse;
+    }
+    &_contacts_img_phone {
+      border: 1rem solid rgba(123, 232, 76, 0.5);
+      animation: borderPhone 5s infinite alternate-reverse;
     }
   }
 
@@ -273,6 +324,29 @@
   }
 }
 
+.hljs {
+  display: block;
+  overflow-x: hidden;
+  padding: 1rem;
+  background: #1a1a1c;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: white;
+}
+
+.hljs-keyword {
+  color: #e1a87a;
+}
+
+.hljs-title {
+  color: #e1a87a;
+}
+
+.hljs-params {
+  color: gray;
+}
+
 .main_skills_grafic:hover .main_skills_circle_html {
   box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.5);
 }
@@ -287,6 +361,46 @@
 
 .main_skills_grafic:hover .main_skills_circle_react {
   box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.5);
+}
+
+@keyframes borderLink {
+  0% {
+    border-width: 0.5rem;
+  }
+  50% {
+    border-width: 0.7rem;
+    box-shadow: 1rem 0rem 1rem rgba(65, 105, 225, 0.5),
+      1rem 0rem 1rem rgba(65, 105, 225, 0.5);
+  }
+  100% {
+    border-width: 1rem;
+  }
+}
+
+@keyframes borderGit {
+  0% {
+    border-width: 0.5rem;
+  }
+  50% {
+    border-width: 0.7rem;
+    box-shadow: 1rem 0px 1rem rgba(55, 55, 55, 0.5);
+  }
+  100% {
+    border-width: 1rem;
+  }
+}
+
+@keyframes borderPhone {
+  0% {
+    border-width: 0.5rem;
+  }
+  50% {
+    border-width: 0.7rem;
+    box-shadow: -1rem 0px 1rem rgba(123, 232, 76, 0.5);
+  }
+  100% {
+    border-width: 1rem;
+  }
 }
 
 @keyframes line {

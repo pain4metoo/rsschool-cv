@@ -9,7 +9,6 @@ function getCor() {
     const offSet = getOffSet(el).top;
     const animNum = 4;
 
-    console.log(offSet);
     let point = window.innerHeight - height / animNum;
 
     if (window.pageYOffset > offSet - point) {

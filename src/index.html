@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
     <link />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -53,16 +57,16 @@
         <nav class="header_menu header_menu_hiden">
           <ul class="header_menu_inner">
             <li class="header_menu_item">
-              <a class="header_menu_link" href="#">Projects</a>
+              <a class="header_menu_link" href="#projects">Projects</a>
             </li>
             <li class="header_menu_item">
-              <a class="header_menu_link" href="#">Skills</a>
+              <a class="header_menu_link" href="#skills">Skills</a>
             </li>
             <li class="header_menu_item">
-              <a class="header_menu_link" href="#">Egucation</a>
+              <a class="header_menu_link" href="#education">Education</a>
             </li>
             <li class="header_menu_item">
-              <a class="header_menu_link" href="#">&lt; Code /&gt;</a>
+              <a class="header_menu_link" href="#code">&lt; Code /&gt;</a>
             </li>
           </ul>
         </nav>
@@ -133,7 +137,7 @@
             me, connect with me today.
           </p>
         </div>
-        <h2 class="main_title_projects">Projects</h2>
+        <h2 class="main_title_projects" id="projects">Projects</h2>
         <div class="main_projects">
           <div class="main_project">
             <h3 class="main_project_title">Title</h3>
@@ -176,7 +180,7 @@
           </div>
         </div>
 
-        <h2 class="main_skills_title">skills & experience</h2>
+        <h2 class="main_skills_title" id="skills">skills & experience</h2>
 
         <div class="main_skills">
           <div class="main_skills_inner">
@@ -191,34 +195,26 @@
               ></div>
             </div>
 
-            <div class="main_skills_description">
-              <div class="main_description_inner">
-                <p class="main_description_title">HTML / CSS / SASS</p>
-                <span
-                  class="main_description_item anim main_description_html main_description_anim_html"
-                ></span>
-              </div>
-              <div class="main_description_inner">
-                <p class="main_description_title">Javascript / Typescript</p>
-                <span
-                  class="main_description_item anim main_description_js main_description_anim_js"
-                ></span>
-              </div>
-              <div class="main_description_inner">
-                <p class="main_description_title">React / Redux</p>
-                <span
-                  class="main_description_item anim main_description_react main_description_anim_react"
-                ></span>
-              </div>
-              <div class="main_description_inner">
-                <p class="main_description_title">
-                  Googling / Git / Figma / Webpack
-                </p>
-                <span
-                  class="main_description_item anim main_description_git main_description_anim_git"
-                ></span>
-              </div>
-            </div>
+            <ul class="main_skills_description">
+              <li class="main_description_title">HTML / CSS / SASS</li>
+              <li
+                class="main_description_item anim main_description_html main_description_anim_html"
+              ></li>
+              <li class="main_description_title">Javascript / Typescript</li>
+              <li
+                class="main_description_item anim main_description_js main_description_anim_js"
+              ></li>
+              <li class="main_description_title">React / Redux</li>
+              <li
+                class="main_description_item anim main_description_react main_description_anim_react"
+              ></li>
+              <li class="main_description_title">
+                Googling / Git / Figma / Webpack
+              </li>
+              <li
+                class="main_description_item anim main_description_git main_description_anim_git"
+              ></li>
+            </ul>
           </div>
 
           <div class="main_skills_text">
@@ -235,8 +231,35 @@
           </div>
         </div>
 
+        <div class="main_code">
+          <h6 class="main_code_title">Code</h6>
+          <pre><code class="main_code_text"> 
+function duplicateCount(text) {
+  let result = {};
+              
+  text.split('').forEach(item => {
+  let letter = item.toLowerCase();
+  if(!result[letter]) {
+    result[letter] = 1;
+  } else {
+      result[letter]++
+    }
+  })
+              
+  let counter = 0;
+              
+  for(let key in result) {
+    if(result[key] >= 2) {
+      counter++
+    }
+  }
+       
+  return counter
+}</code></pre>
+        </div>
+
         <div class="main_education">
-          <h2 class="main_education_title">Education</h2>
+          <h2 class="main_education_title" id="education">Education</h2>
 
           <div class="main_education_inner">
             <span class="main_education_text">Specialized</span>
@@ -248,27 +271,65 @@
           <h2 class="main_contacts_title">Contacts</h2>
 
           <ul class="main_contacts_items">
-            <li class="main_contacts_item">+48 791-214-782</li>
+            <li class="main_contacts_item">
+              <a class="main_contacts_link" href="tel: +48791214782">
+                <img
+                  class="main_contacts_img main_contacts_img_phone"
+                  src="./assets/images/phone.png"
+                  alt="phone"
+                />
+              </a>
+            </li>
             <li class="main_contacts_item">
               <a
                 class="main_contacts_link"
                 href="https://www.linkedin.com/in/pain4metoo"
                 target="blank"
-                >Linkedin</a
-              >
+                ><img
+                  class="main_contacts_img main_contacts_img_link"
+                  src="./assets/images/linkedin.png"
+                  alt="linkedin"
+              /></a>
             </li>
             <li class="main_contacts_item">
               <a
                 class="main_contacts_link"
                 href="https://github.com/pain4metoo"
                 target="blank"
-                >Github</a
-              >
+                ><img
+                  class="main_contacts_img main_contacts_img_git"
+                  src="./assets/images/github1.png"
+                  alt="github"
+              /></a>
             </li>
           </ul>
         </div>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer_inner">
+        <a class="footer_link_rs" href="https://rs.school/" target="blank">
+          <img
+            class="footer_img_rs"
+            src="./assets/images/rs.jpg"
+            alt="rs-school"
+          />
+        </a>
+        <p class="footer_year">2022</p>
+        <a
+          class="footer_link_git"
+          href="https://github.com/pain4metoo"
+          target="_blank"
+          ><img
+            class="footer_img_git"
+            src="./assets/images/github2.png"
+            alt="github"
+        /></a>
+      </div>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

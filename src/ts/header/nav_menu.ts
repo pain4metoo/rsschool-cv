@@ -27,7 +27,7 @@ const isVisible = () => {
 
 menuBtn?.addEventListener("click", isVisible);
 menuInner?.addEventListener("click", (e) => {
-  let target = e.target;
+  let target: EventTarget | null = e.target;
   const menuItems: NodeListOf<Element> | null =
     document.querySelectorAll(".header_menu_link");
 

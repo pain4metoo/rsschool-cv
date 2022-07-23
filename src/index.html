@@ -10,10 +10,58 @@
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
     />
+    <link type="image/x-icon" href="./assets/favicon.ico" rel="shortcut icon">
   </head>
   <body>
     <header class="header">
       <div class="container">
+        <div class="video">
+          <div class="video_inner">
+            <button class="video_btn_close" type="button"></button>
+            <div class="test" style="position: relative">
+              <button class="video_btn_play" type="button"></button>
+              <video class="video_main">
+                <source src="./assets/video/main-video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="video_controls">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-width: 100%;
+                  width: 100%;
+                "
+              >
+                <button class="video_control_play" type="button"></button>
+                <button class="video_control_pause" type="button"></button>
+                <div class="video_control_progress">
+                  <span class="video_control_marker"></span>
+                  <span class="video_control_line"></span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  max-width: 50rem;
+                  width: 100%;
+                "
+              >
+                <button class="video_control_sound" type="button"></button>
+                <input
+                  class="video_control_volume"
+                  type="range"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="40"
+                />
+              </div>
+              <button class="video_control_full" type="button"></button>
+            </div>
+          </div>
+        </div>
         <div class="header_video_inner">
           <video
             class="header_video"

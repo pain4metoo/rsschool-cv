@@ -180,6 +180,7 @@
       overflow: hidden;
       bottom: 0%;
       transform: translateX(-50%);
+      pointer-events: none;
       &_link {
         width: 3.5rem;
         height: 3.5rem;
@@ -190,6 +191,7 @@
         bottom: 10%;
         left: 50%;
         transition: ease-in all 0.5s;
+        pointer-events: all;
       }
       &_image {
         width: 100%;
@@ -200,6 +202,269 @@
           opacity: 0.6;
           transform: scale(1.1);
         }
+      }
+    }
+  }
+
+  .video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    overflow: hidden;
+    z-index: 1000;
+    transition: ease-in all 0.5s;
+    cursor: pointer;
+    &:fullscreen {
+      object-fit: cover;
+    }
+    &_btn_close {
+      width: 3.5rem;
+      height: 3.5rem;
+      -webkit-appearance: none;
+      background-image: url("../assets/images/close.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 2rem;
+      top: 5rem;
+      background-color: transparent;
+      transition: ease 0.5s;
+      cursor: pointer;
+      border: none;
+      z-index: 1000;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    &_inner {
+      min-width: 31rem;
+      max-width: 150rem;
+      width: 100%;
+      min-height: 22rem;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-left: 5px solid rgba(255, 255, 255, 0.11);
+      padding: 1rem;
+    }
+    &_main {
+      width: 100%;
+      height: 100%;
+      margin-top: 3rem;
+      &:fullscreen {
+        object-fit: cover;
+      }
+    }
+    &_hiden {
+      opacity: 0;
+      z-index: -999;
+      position: absolute;
+      transition: linear 0.5s;
+    }
+    &_btn_play {
+      min-width: 7.5rem;
+      min-height: 7.5rem;
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      border: none;
+      transition: ease 0.5s;
+      z-index: 1000;
+      cursor: pointer;
+      background-image: url("../assets/images/play-main.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: transparent;
+      -webkit-appearance: none;
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    &_controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      bottom: 4rem;
+      background-color: rgba(#1a1a1a, 0.7);
+    }
+    &_control_play {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-image: url("../assets/images/play-mini.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      transition: ease 0.5s;
+      margin-left: 1rem;
+      border: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    &_control_pause {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-image: url("../assets/images/pause-mini.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      transition: ease 0.5s;
+      margin-left: 1rem;
+      border: none;
+      display: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    &_control_progress {
+      width: 100%;
+      height: 0.4rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(#d26cd5, 0.5);
+      outline: none;
+      transition: ease-in-out 0.5s;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+    &_control_line {
+      height: 0.4rem;
+      background: azure;
+      position: absolute;
+      left: 0;
+    }
+    &_control_marker {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -0.7rem;
+      width: 0.3rem;
+      height: 2rem;
+      background-color: white;
+      cursor: pointer;
+    }
+    &_control_sound {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-image: url("../assets/images/sound.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      transition: ease 0.5s;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      -webkit-appearance: none;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    &_control_sound_off:after {
+      content: "";
+      position: absolute;
+      width: 0.3rem;
+      height: 3.3rem;
+      left: 1.5rem;
+      bottom: 0.2rem;
+      background: rgba(210, 108, 213, 1);
+      transform: rotate(45deg);
+    }
+    &_control_volume {
+      width: 100%;
+      height: 0.4rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 0.5rem;
+      background: linear-gradient(
+        to right,
+        #ffffff 0%,
+        #ffffff 40%,
+        rgba(210, 108, 213, 0.5) 0%,
+        rgba(210, 108, 213, 0.5) 40%
+      );
+      outline: none;
+      -webkit-appearance: none;
+      transition: ease-in-out 0.5s;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 0.3rem;
+        height: 2rem;
+        background-color: white;
+        cursor: pointer;
+        transition: ease 0.5s;
+        &:hover {
+          opacity: 0.5;
+          width: 0.7rem;
+          height: 2.3rem;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+    &_control_full {
+      width: 3.5rem;
+      height: 3.5rem;
+      background-image: url("../assets/images/full.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      transition: ease 0.5s;
+      border: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      margin-right: 1rem;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:active {
+        opacity: 0.5;
       }
     }
   }

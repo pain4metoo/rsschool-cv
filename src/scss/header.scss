@@ -217,6 +217,7 @@
     z-index: 1000;
     transition: ease-in all 0.5s;
     cursor: pointer;
+    user-select: auto;
     &:fullscreen {
       object-fit: cover;
     }

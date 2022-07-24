@@ -1,9 +1,7 @@
 import { getOffSet } from "./anim_skills";
 
 const startPoints: any = document.querySelectorAll(".anim_0");
-const textAbout: HTMLInputElement | any = customText(
-  document.querySelectorAll(".anim_0")
-);
+const textAbout: HTMLInputElement | any = customText(document.querySelectorAll(".anim_0"));
 
 function showAnim() {
   textAbout.forEach((domEl) => {

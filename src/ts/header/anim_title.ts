@@ -2,9 +2,9 @@ const welcomeText: HTMLInputElement | any = showText(
   document.querySelector(".header_title_text")
 );
 
-setTimeout(() => welcomeText.forEach((i) => (i.style.opacity = 1)), 0);
+setTimeout(() => welcomeText.forEach((i: { style: { opacity: number; }; }) => (i.style.opacity = 1)), 0);
 
-export function showText(element) {
+function showText(element) {
   element.style.wordBreak = "break-word";
 
   const letters = element.innerText

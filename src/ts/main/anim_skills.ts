@@ -7,9 +7,7 @@ function getCor() {
     let el = skillsGrafic[i];
     const height = el.offsetHeight;
     const offSet = getOffSet(el).top;
-    const animNum = 4;
-
-    let point = window.innerHeight - height / animNum;
+    let point = window.innerHeight - height;
 
     if (window.pageYOffset > offSet - point) {
       el.classList.add("active");
@@ -17,7 +15,7 @@ function getCor() {
   }
 }
 
-function getOffSet(el) {
+export function getOffSet(el) {
   const rect = el.getBoundingClientRect();
   const scrollLeft = window.pageXOffset;
   const scrollTop = window.pageYOffset;

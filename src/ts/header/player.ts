@@ -27,6 +27,9 @@ const showVideo = () => {
 const closeVideo = () => {
   videoInner?.classList.add("video_hiden");
   stopVideo()
+  if(document.fullscreenElement) {
+    fullScreen();
+  }
 }
 
 const playVideo = () => {

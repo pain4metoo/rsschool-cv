@@ -18,7 +18,7 @@
         <div class="video video_hiden">
           <div class="video_inner">
             <button class="video_btn_close" type="button"></button>
-            <div class="test" style="position: relative">
+            <div style="position: relative">
               <button class="video_btn_play" type="button"></button>
               <video class="video_main">
                 <source src="./assets/video/main-video1.mp4" type="video/mp4" />
@@ -173,59 +173,101 @@
             src="./assets/images/i.jpg"
             alt="it's me"
           />
-
           <h4 class="main_about_title">
-            My passion and focus is Squarespace development
+            My passion and focus is Front-end development
           </h4>
-
           <p class="main_about_text">
-            Let's be honest and cut through the marketing fluff. You need a
-            website that looks amazing and actually works. The bottom line,
-            that's what I do. And if you want to learn more about working with
-            me, connect with me today.
+            At the moment I am raising my English level to B1+. I am able to
+            solve tasks independently, I find information very well. A positive
+            and sociable person. I ask a lot of questions :)
           </p>
         </div>
         <h2 class="main_title_projects" id="projects">Projects</h2>
         <div class="main_projects">
-          <div class="main_project">
-            <h3 class="main_project_title">Title</h3>
-            <p class="main_project_text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-              sapiente voluptas rerum odio in est doloremque minus tempora quo
-              facere quaerat dignissimos quos explicabo.
-            </p>
-            <button class="main_project_btn" type="button">more</button>
-          </div>
+          <a
+            class="main_project"
+            href="https://pain4metoo.github.io/myProjects/momentum/"
+            target="blank"
+          >
+            <h3 class="main_project_title">SPA - Momentum</h3>
 
-          <div class="main_project">
-            <h3 class="main_project_title">Title</h3>
-            <p class="main_project_text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-              sapiente voluptas rerum odio in est doloremque minus tempora quo
-              facere quaerat dignissimos quos explicabo.
-            </p>
-            <button class="main_project_btn" type="button">more</button>
-          </div>
+            <img
+              class="main_project_img momentum"
+              src="./assets/images/project-momentum.png"
+              alt="momentum"
+            />
 
-          <div class="main_project">
-            <h3 class="main_project_title">Title</h3>
             <p class="main_project_text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-              sapiente voluptas rerum odio in est doloremque minus tempora quo
-              facere quaerat dignissimos quos explicabo.
+              Momentum is an analog of the application of the same name in the
+              Chrome online store. The app shows the time and the username. The
+              background image and greeting change depending on the time of day.
             </p>
-            <button class="main_project_btn" type="button">more</button>
-          </div>
+            <button class="main_project_btn" type="button">click</button>
+          </a>
 
-          <div class="main_project">
-            <h3 class="main_project_title">Title</h3>
+          <a
+            class="main_project"
+            href="https://pain4metoo.github.io/myProjects/museum/"
+            target="blank"
+          >
+            <h3 class="main_project_title">Landing Page - Museum louvre</h3>
+            <img
+              class="main_project_img louvre"
+              src="./assets/images/project-louvre.png"
+              alt="museum_louvre"
+            />
             <p class="main_project_text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-              sapiente voluptas rerum odio in est doloremque minus tempora quo
-              facere quaerat dignissimos quos explicabo.
+              Excursion to the Louvre, on this site you will find 3 sliders. Two
+              of which are implemented in pure javascript. Implementation of
+              parallax, spectacular animation. A ticket purchase form with a
+              calculator embedded in it.
             </p>
-            <button class="main_project_btn" type="button">more</button>
-          </div>
+            <button class="main_project_btn" type="button">click</button>
+          </a>
+
+          <a
+            class="main_project"
+            href="https://pain4metoo.github.io/myProjects/art-quiz/"
+            target="blank"
+          >
+            <h3 class="main_project_title">SPA - Art quiz</h3>
+            <img
+              class="main_project_img art"
+              src="./assets/images/project-artquiz.jpg"
+              alt="art_quiz"
+            />
+
+            <p class="main_project_text">
+              Art Quiz is a quiz application for the knowledge of masterpieces
+              of painting and their authors. You guess the authors of the
+              paintings, the course of the game is saved when you exit, there
+              are settings in the application (language, sound, playing against
+              time).
+            </p>
+            <button class="main_project_btn" type="button">click</button>
+          </a>
+
+          <a
+            class="main_project"
+            href="https://pain4metoo.github.io/english-quiz/"
+            target="blank"
+          >
+            <h3 class="main_project_title">English-quiz - Dev in progress</h3>
+            <img
+              class="main_project_img english"
+              src="./assets/images/project-english.png"
+              alt="english_quiz"
+            />
+            <p class="main_project_text">
+              SPA project "English quiz". In this project, I applied all the
+              knowledge I had previously gained in HTML, CSS, SASS, JS, TS,
+              React/Redux. Asynchronous functions, pop-ups, interactive user
+              interaction. Storing data in local storage and the like. In
+              parallel, he mastered writing pure components (class,
+              functionality), Redux, state management, using props.
+            </p>
+            <button class="main_project_btn" type="button">click</button>
+          </a>
         </div>
 
         <h2 class="main_skills_title" id="skills">skills & experience</h2>
@@ -272,37 +314,52 @@
               alt="it's me"
             />
             <p class="main_skills_about">
-              At the moment I am raising my English level to B2. I am able to
-              solve tasks independently, I find information very well. A
-              positive and sociable person. I ask a lot of questions :)
+              <br />
+              •
+              <span class="main_skills_about_1 anim_0">HTML/CSS/SASS</span>
+              was studied by the method of layout of landing pages, multi-page
+              sites. I created a slider in pure css and various animations.
+              Studied the semantics and methodology of BEM. I learned how to
+              write proper HTML and CSS. I studied SASS, which simplifies CSS
+              writing. <br />
+              •
+              <span class="main_skills_about_2 anim_0">
+                I studied JavaScript </span
+              >, solving problems on CodeWars 4-8 kyu, created interactive
+              elements on the site page, such as (slider, video player, forms,
+              pop-ups). I used JS to interact with DOM elements. I made an
+              analogue of the Momentum application on pure JS. I learned how to
+              work with asynchronous functions and APIs.<br />
+              •
+              <span class="main_skills_about_3 anim_0">Git/Npm </span> All my
+              projects are on github, I studied how to use git correctly in
+              practice when developing my projects. Npm has been studied in
+              practice when installing various libraries. <br />
+              •
+              <span class="main_skills_about_4 anim_0"
+                >React/Redux/TypeScript
+              </span>
+              was learned by creating a favorite SPA project "English quiz". In
+              this project, I applied all the knowledge I had previously gained
+              in HTML, CSS, SASS, JS, TS. Asynchronous functions, pop-ups,
+              interactive user interaction. Storing data in local storage and
+              the like. In parallel, he mastered writing pure components (class,
+              functionality), Redux, state management, using props, redux thunk.
             </p>
           </div>
         </div>
 
         <div class="main_code">
-          <h6 class="main_code_title">Code</h6>
+          <h6 class="main_code_title" id="code">Code</h6>
           <pre><code class="main_code_text"> 
-function duplicateCount(text) {
-  let result = {};
-              
-  text.split('').forEach(item => {
-  let letter = item.toLowerCase();
-  if(!result[letter]) {
-    result[letter] = 1;
-  } else {
-      result[letter]++
-    }
-  })
-              
-  let counter = 0;
-              
-  for(let key in result) {
-    if(result[key] >= 2) {
-      counter++
-    }
-  }
-       
-  return counter
+function showAnim() {
+ textAbout.forEach((domEl) => {
+  domEl.forEach((lettersArray) =>
+   lettersArray.forEach((letter) => {
+    setTimeout(() => (letter.style.opacity = "1")), 0;
+   })
+  );
+ }, 0);
 }</code></pre>
         </div>
 

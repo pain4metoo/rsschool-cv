@@ -212,12 +212,14 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: black;
+    background-color: rgba(#000, 0.9);
     overflow: hidden;
     z-index: 1000;
     transition: ease-in all 0.5s;
     cursor: pointer;
     user-select: auto;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
     &:fullscreen {
       object-fit: cover;
     }
@@ -255,15 +257,11 @@
       left: 50%;
       border: 1px solid rgba(255, 255, 255, 0.11);
       border-left: 5px solid rgba(255, 255, 255, 0.11);
-      padding: 1rem;
     }
     &_main {
       width: 100%;
       height: 100%;
       margin-top: 3rem;
-      &:fullscreen {
-        object-fit: cover;
-      }
     }
     &_hiden {
       opacity: 0;
@@ -468,6 +466,13 @@
         opacity: 0.5;
       }
     }
+  }
+
+  .video:fullscreen .video_main {
+    height: 100vh;
+    width: 100vh;
+    object-fit: cover;
+    overflow: hidden;
   }
 
   .header_video_block:hover .header_video_btn,

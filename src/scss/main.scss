@@ -23,7 +23,7 @@
       line-height: 2.1rem;
       margin: 0;
       padding: 1rem;
-      margin-top: 3rem;
+      margin-top: 1rem;
       padding-left: 3rem;
       font-weight: 300;
       min-width: 28rem;
@@ -40,31 +40,38 @@
       display: grid;
       grid-template-columns: 1fr;
       margin: 0 auto;
-      max-width: 32rem;
+      max-width: 70rem;
       padding: 1rem;
     }
     &_project {
       border: 1px solid rgba(255, 255, 255, 0.11);
       min-width: 25rem;
       min-height: 34rem;
-      max-width: 32rem;
       width: 100%;
+      text-decoration: none;
+      color: $color-main;
       border-left: 5px solid rgba(255, 255, 255, 0.11);
       padding: 1rem;
       margin-bottom: 1rem;
     }
     &_project_title {
-      font-size: 3rem;
-      line-height: 3.1rem;
+      font-size: 2rem;
+      line-height: 2.7rem;
       font-weight: bold;
-      padding-left: 3rem;
       margin: 2rem 0rem;
+      text-align: center;
+    }
+    &_project_img {
+      min-height: 30rem;
+      max-height: 40rem;
+      width: 100%;
+      object-fit: cover;
+      transition: ease 0.5s;
     }
     &_project_text {
       font-size: 1.6rem;
-      padding-left: 3rem;
-      margin: 0;
-      margin-bottom: 2rem;
+      line-height: 2.3rem;
+      color: $color-main;
     }
     &_project_btn {
       z-index: 1;
@@ -78,6 +85,9 @@
       padding: 1rem 4rem;
       cursor: pointer;
       transition: ease-in 0.5s;
+      margin: 0 auto;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
       &:hover {
         border-color: transparent;
       }
@@ -113,9 +123,21 @@
       padding: 1rem;
     }
     &_skills_about {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       padding-left: 1rem;
       margin: 0;
+    }
+    &_skills_about_1 {
+      color: #08fdd8;
+    }
+    &_skills_about_2 {
+      color: #ff2253;
+    }
+    &_skills_about_3 {
+      color: #d26cd5;
+    }
+    &_skills_about_4 {
+      color: #ffeecd;
     }
     &_skills_grafic {
       width: 20rem;
@@ -304,47 +326,94 @@
       animation: borderPhone 5s infinite alternate-reverse;
     }
   }
+}
 
-  .main_project_btn:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: translateX(-100%);
-    background: #e1a87a;
-    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+.main_project:active .momentum {
+  transform: scale(0.9);
+  box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.5);
+}
 
-  .main_project_btn:hover:before {
-    transform: translateX(0);
-    color: white;
-  }
+.main_project:active .louvre {
+  transform: scale(0.9);
+  box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.5);
+}
+
+.main_project:active .art {
+  transform: scale(0.9);
+  box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.5);
+}
+
+.main_project:active .english {
+  transform: scale(0.9);
+  box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.5);
+}
+
+.main_project:hover .momentum {
+  transform: scale(0.9);
+  box-shadow: 0px -2rem 1rem rgba(#08fdd8, 0.5);
+}
+
+.main_project:hover .louvre {
+  transform: scale(0.9);
+  box-shadow: 2rem 0px 1rem rgba(#ff2253, 0.5);
+}
+
+.main_project:hover .art {
+  transform: scale(0.9);
+  box-shadow: 0px 2rem 1rem rgba(#d26cd5, 0.5);
+}
+
+.main_project:hover .english {
+  transform: scale(0.9);
+  box-shadow: -2rem 0px 1rem rgba(#ffeecd, 0.5);
+}
+
+.main_project:hover .main_project_btn:before {
+  transform: translateX(0);
+  color: white;
+}
+
+.main_project_btn:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: #e1a87a;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.main_project_btn:hover:before {
+  transform: translateX(0);
+  color: white;
 }
 
 .hljs {
   display: block;
-  overflow-x: hidden;
   padding: 1rem;
   background: #1a1a1c;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-left: 0;
+  padding-left: 0.3rem;
   line-height: 2rem;
   font-weight: 300;
   color: white;
-}
-
-.hljs-keyword {
-  color: #e1a87a;
-}
-
-.hljs-title {
-  color: #e1a87a;
+  width: 100%;
 }
 
 .hljs-params {
   color: gray;
+}
+
+.hljs-string {
+  color: green;
+}
+
+.hljs-function {
+  color: #e1a87a;
 }
 
 .main_skills_grafic:hover .main_skills_circle_html {

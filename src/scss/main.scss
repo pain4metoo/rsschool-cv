@@ -194,6 +194,12 @@
       flex-direction: column;
       margin: 2rem;
     }
+    &_space_line {
+      display: block;
+      width: 100%;
+      height: 1rem;
+      background: red;
+    }
     &_description_inner {
       display: flex;
       flex-direction: column;
@@ -279,6 +285,22 @@
         background: yellow;
       }
     }
+    &_lang_title {
+      margin: 0;
+      text-align: center;
+      padding: 4rem 0;
+      padding-bottom: 2rem;
+    }
+    &_lang_items {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    &_lang_item {
+      font-weight: 300;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
     &_contacts_title {
       margin: 0;
       text-align: center;
@@ -325,6 +347,20 @@
       border: 1rem solid rgba(123, 232, 76, 0.5);
       animation: borderPhone 5s infinite alternate-reverse;
     }
+  }
+}
+
+.anim_0 {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.05rem;
+    opacity: 0.4;
+    background-color: #e1a87a;
   }
 }
 

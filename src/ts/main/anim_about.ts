@@ -1,9 +1,11 @@
 import { getOffSet } from "./anim_skills";
 
-const startPoints: any = document.querySelectorAll(".anim_0");
-const textAbout: HTMLInputElement | any = customText(document.querySelectorAll(".anim_0"));
+export const startPoints: any = document.querySelectorAll(".anim_0");
+const textAbout: HTMLInputElement | any = customText(
+  document.querySelectorAll(".anim_0")
+);
 
-function showAnim() {
+export function showAnim() {
   textAbout.forEach((domEl) => {
     domEl.forEach((lettersArray) =>
       lettersArray.forEach((letter) => {
@@ -36,14 +38,3 @@ function customText(element) {
 
   return lettersArr;
 }
-
-window.addEventListener("scroll", () => {
-  startPoints.forEach((el) => {
-    const height = el.offsetHeight;
-    const offSet = getOffSet(el).top;
-    let point = window.innerHeight - height;
-    if (window.pageYOffset > offSet - point) {
-      showAnim();
-    }
-  });
-});

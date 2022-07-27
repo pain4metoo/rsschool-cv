@@ -13,7 +13,7 @@
     <link type="image/x-icon" href="./assets/favicon.ico" rel="shortcut icon" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="video video_hiden">
           <div class="video_inner">
@@ -112,6 +112,9 @@
             </li>
             <li class="header_menu_item">
               <a class="header_menu_link" href="#education">Education</a>
+            </li>
+            <li class="header_menu_item">
+              <a class="header_menu_link" href="#languages">Languages</a>
             </li>
             <li class="header_menu_item">
               <a class="header_menu_link" href="#code">&lt; Code /&gt;</a>
@@ -324,12 +327,13 @@
               writing. <br />
               •
               <span class="main_skills_about_2 anim_0">
-                I studied JavaScript </span
-              >, solving problems on CodeWars 4-8 kyu, created interactive
-              elements on the site page, such as (slider, video player, forms,
-              pop-ups). I used JS to interact with DOM elements. I made an
-              analogue of the Momentum application on pure JS. I learned how to
-              work with asynchronous functions and APIs.<br />
+                I studied JavaScript
+              </span>
+              solving problems on CodeWars 4-8 kyu, created interactive elements
+              on the site page, such as (slider, video player, forms, pop-ups).
+              I used JS to interact with DOM elements. I made an analogue of the
+              Momentum application on pure JS. I learned how to work with
+              asynchronous functions and APIs.<br />
               •
               <span class="main_skills_about_3 anim_0">Git/Npm </span> All my
               projects are on github, I studied how to use git correctly in
@@ -372,6 +376,16 @@ function showAnim() {
             <span class="main_education_text">education</span>
           </div>
         </div>
+
+        <div class="main_lang" id="languages">
+          <h2 class="main_lang_title" id="lang">Languages</h2>
+
+          <ul class="main_lang_items">
+            <li class="main_lang_item">Russian - Native</li>
+            <li class="main_lang_item">English - B1</li>
+          </ul>
+        </div>
+
         <div class="main_contacts">
           <h2 class="main_contacts_title">Contacts</h2>
 
@@ -412,6 +426,7 @@ function showAnim() {
       </div>
     </main>
     <footer class="footer">
+      <a class="footer_arrow" href="#header"></a>
       <div class="footer_inner">
         <a class="footer_link_rs" href="https://rs.school/" target="blank">
           <img

@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (min-width: 280px) {
   .header {
     background-color: $color-bg;
     min-height: 100vh;
@@ -12,6 +12,9 @@
       margin-left: 2rem;
       z-index: 2;
       position: relative;
+      &_1 {
+        display: none;
+      }
     }
     &_title {
       margin: 0;
@@ -499,5 +502,83 @@
   .header_btn:hover::after {
     transform: translateX(0%);
     color: white;
+  }
+}
+
+@media (min-width: 760px) {
+  .header {
+    &_menu_btn {
+      display: none;
+    }
+    &_logo {
+      display: none;
+      &_1 {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 1rem;
+      }
+    }
+    &_logo_1 {
+      display: block;
+    }
+    &_menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transform: none;
+      position: inherit;
+      opacity: 1;
+      padding-top: 2rem;
+    }
+    &_menu_inner {
+      display: flex;
+      align-items: center;
+    }
+    &_menu_item {
+      padding: 0;
+      margin-right: 6rem;
+    }
+    &_menu_link {
+      display: block;
+      font-weight: 400;
+      line-height: 2.1rem;
+    }
+    &_video_inner {
+      pointer-events: none;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    &_logo_1 {
+      width: 8rem;
+      height: 8rem;
+    }
+    &_title {
+      font-size: 10rem;
+      line-height: 12rem;
+    }
+    &_title_text {
+      font-size: 6rem;
+    }
+    &_menu {
+      padding-top: 5rem;
+    }
+    &_menu_link {
+      font-size: 2.5rem;
+    }
+    &_btn_link {
+      font-size: 5rem;
+      padding: 4rem 4.5rem;
+    }
+    &_video_text {
+      font-size: 5rem;
+    }
+    &_video_btn {
+      width: 10rem;
+      height: 10rem;
+      margin-right: 3rem;
+    }
   }
 }

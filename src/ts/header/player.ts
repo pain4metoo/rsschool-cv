@@ -12,6 +12,7 @@ const progressDumb: HTMLInputElement | null = document.querySelector('.video_con
 const btnSound: HTMLInputElement | null = document.querySelector(".video_control_sound");
 const volume: HTMLInputElement | any = <HTMLAudioElement> document.querySelector(".video_control_volume");
 const btnFullL: HTMLInputElement | null = document.querySelector(".video_control_full");
+const videoBg: HTMLInputElement | null = document.querySelector('.header_video_inner');
 
 window.onload = function() {
   if(video) {
@@ -145,6 +146,7 @@ videoInner?.addEventListener("click", (e) => {
     closeVideo();
   }
 })
+
 volume?.addEventListener("input", setVolume);
 btnSound?.addEventListener("click", toggleVolume);
 progressBlock?.addEventListener("click", setProgress);

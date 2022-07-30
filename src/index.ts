@@ -6,3 +6,4 @@ import "./ts/header/player";
 import "./ts/header/anim_title";
 import "./ts/footer/arrowUp";
 import "./ts/scroll";
+import "./ts/load";

@@ -27,10 +27,14 @@ const isVisible = () => {
 
 menuBtn?.addEventListener("click", isVisible);
 menuInner?.addEventListener("click", (e) => {
+  const screenWidth = window.screen.width;
   let target: EventTarget | null = e.target;
   const menuItems: NodeListOf<Element> | null =
     document.querySelectorAll(".header_menu_link");
 
+  if (screenWidth >= 760) {
+    return;
+  }
   for (let i = 0; i < menuItems.length; i++) {
     if (target === menuItems[i]) {
       isVisible();

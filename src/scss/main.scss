@@ -127,7 +127,7 @@
       padding: 1rem;
     }
     &_skills_about {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       line-height: 2.7rem;
       padding-left: 1rem;
       margin: 0;
@@ -149,7 +149,7 @@
       height: 20rem;
       border-radius: 50%;
       border: 2rem solid transparent;
-      margin: 0 auto;
+      margin: 2rem auto;
       position: relative;
       margin-bottom: 2rem;
       transition: linear 3s;
@@ -197,7 +197,8 @@
     &_skills_inner {
       display: flex;
       flex-direction: column;
-      margin: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-left: 5px solid rgba(255, 255, 255, 0.11);
     }
     &_space_line {
       display: block;
@@ -444,7 +445,7 @@
     display: block;
     padding: 1rem;
     background: #1a1a1c;
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding-left: 0;
     padding-left: 0.3rem;
     line-height: 2.7rem;
@@ -612,7 +613,7 @@
       height: 30rem;
     }
     &_skills_about {
-      font-size: 2.1rem;
+      font-size: 1.9rem;
       line-height: 3.7rem;
       font-weight: 400;
       margin: 1rem;
@@ -634,7 +635,7 @@
       line-height: 2.7rem;
     }
     &_code_text {
-      font-size: 2.5rem;
+      font-size: 2.1rem;
       line-height: 3.7rem;
     }
     &_title_projects {
@@ -733,7 +734,7 @@
       max-width: 50rem;
       height: 50rem;
       width: 100%;
-      margin-right: 3rem;
+      margin: 2rem;
     }
     &_skills_circle {
       width: 109%;
@@ -795,8 +796,8 @@
       margin-right: 10rem;
     }
     &_skills_about {
-      font-size: 2.5rem;
-      line-height: 4.7rem;
+      font-size: 2.1rem;
+      line-height: 3.7rem;
     }
     &_skills_text {
       max-width: 100%;

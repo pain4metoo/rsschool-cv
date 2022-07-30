@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
-    <link />
+    <link rel="stylesheet" href="./scss/default.scss" />
     <link
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
@@ -113,15 +113,13 @@
               <p class="header_title_text">[Hi! My name is Zhenya. I'm]</p>
             </div>
             <h1 class="header_title">Trainee Front-End Developer</h1>
-            <button class="header_btn">
-              <a
-                class="header_btn_link"
-                href="./assets/content/cv-it.pdf"
-                title
-                download
-                >Download CV</a
-              >
-            </button>
+            <a
+              class="header_btn_link"
+              href="./assets/content/cv-it.pdf"
+              target="blank"
+            >
+              Download CV
+            </a>
             <div class="header_video_block">
               <button class="header_video_btn">
                 <img
@@ -170,7 +168,6 @@
               class="header_social_link"
               href="https://www.instagram.com/pain4metoo/"
               target="blank"
-              s
               ><img
                 class="header_social_image"
                 src="./assets/images/instagram.png"
@@ -220,7 +217,7 @@
                 The background image and greeting change depending on the time
                 of day.
               </p>
-              <button class="main_project_btn" type="button">click</button>
+              <div class="main_project_btn" type="button">click</div>
             </a>
 
             <a
@@ -240,7 +237,7 @@
                 of parallax, spectacular animation. A ticket purchase form with
                 a calculator embedded in it.
               </p>
-              <button class="main_project_btn" type="button">click</button>
+              <div class="main_project_btn" type="button">click</div>
             </a>
 
             <a
@@ -262,7 +259,7 @@
                 are settings in the application (language, sound, playing
                 against time).
               </p>
-              <button class="main_project_btn" type="button">click</button>
+              <div class="main_project_btn" type="button">click</div>
             </a>
 
             <a
@@ -282,7 +279,7 @@
                 React/Redux. Asynchronous functions, pop-ups, interactive user
                 interaction. Storing data in local storage and the like.
               </p>
-              <button class="main_project_btn" type="button">click</button>
+              <div class="main_project_btn" type="button">click</div>
             </a>
           </div>
 
@@ -410,7 +407,7 @@ function showAnim() {
 
             <ul class="main_contacts_items">
               <li class="main_contacts_item">
-                <a class="main_contacts_link" href="tel: +48791214782">
+                <a class="main_contacts_link" href="tel:+48791214782">
                   <img
                     class="main_contacts_img main_contacts_img_phone"
                     src="./assets/images/phone.png"

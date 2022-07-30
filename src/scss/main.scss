@@ -82,9 +82,10 @@
       margin-left: 3rem;
       position: relative;
       overflow: hidden;
-      display: block;
       background-color: transparent;
       color: $color-main;
+      max-width: 16rem;
+      text-align: center;
       border: 0.1rem solid #e1a87a;
       padding: 1rem 4rem;
       cursor: pointer;

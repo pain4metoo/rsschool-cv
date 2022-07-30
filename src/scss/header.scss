@@ -54,9 +54,12 @@
       height: 100%;
       overflow: hidden;
     }
-    &_btn {
+    &_btn_link {
       display: block;
       position: relative;
+      text-decoration: none;
+      max-width: 30rem;
+      text-align: center;
       z-index: 1;
       margin: 0 auto;
       margin-top: 5rem;
@@ -66,15 +69,10 @@
       cursor: pointer;
       transition: ease-in 0.5s;
       overflow: hidden;
+      color: $color-main;
       &:hover {
         border-color: transparent;
       }
-    }
-    &_btn_link {
-      text-decoration: none;
-      color: $color-main;
-      font-weight: 300;
-      font-size: 2rem;
     }
     &_video_block {
       display: flex;
@@ -503,7 +501,7 @@
     opacity: 0.5;
   }
 
-  .header_btn::after {
+  .header_btn_link::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -516,7 +514,7 @@
     transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
-  .header_btn:hover::after {
+  .header_btn_link:hover::after {
     transform: translateX(0%);
     color: white;
   }

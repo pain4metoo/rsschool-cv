@@ -1,0 +1,9 @@
+"use strict";
+import "./js/header/nav_menu.js";
+import "./js/main/anim_about.js";
+import "./js/main/anim_skills.js";
+import "./js/header/player.js";
+import "./js/header/anim_title.js";
+import "./js/footer/arrowUp.js";
+import "./js/scroll.js";
+import "./js/load.js";

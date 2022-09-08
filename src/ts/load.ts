@@ -24,11 +24,6 @@ const load = () => {
 window.addEventListener("load", (event) => {
   if (event.timeStamp > 5000) {
     load();
-  } else {
-    try {
-      load();
-    } catch (e) {
-      throw new Error(`${e} error load`);
-    }
   }
+  load();
 });

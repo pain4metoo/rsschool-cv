@@ -14,11 +14,21 @@ const load = () => {
     if (preLoader && body) {
       preLoader.style.display = "none";
       body.style.overflow = "auto";
-      setTimer()
+      setTimer();
     } else {
       throw new Error('Object is possibly "null"');
     }
   }, 1000);
 };
 
-window.addEventListener("load", load);
+window.addEventListener("load", (event) => {
+  if (event.timeStamp > 5000) {
+    load();
+  } else {
+    try {
+      load();
+    } catch (e) {
+      throw new Error(`${e} error load`);
+    }
+  }
+});
